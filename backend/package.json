@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "db:push": "drizzle-kit push",
+    "db:seed": "bun src/db/seed.ts",
+    "db:studio": "drizzle-kit studio",
+    "typecheck": "bun check"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "dotenv": "^18.0.10",
+    "drizzle-kit": "^0.31.11"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.3",
+    "drizzle-orm": "^0.45.4",
+    "elysia": "^2.0.0-rc.4",
+    "postgres": "^4.1.0"
+  }
+}
